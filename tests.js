@@ -11,9 +11,8 @@ QUnit.test("Test the getCentralCode function.", function (assert) {
 });
 
 QUnit.test("Test the displayAreaCode function.", function (assert) {
-    var outputText = "",
-    var phoneNum = "(415)-847-5555";
- document.getElementById('outputId').innerHTML;
-    var result = displayAreaCode(phoneNum, output);
+    var inputId = "(415)8475555";
+
+    var result = displayAreaCode('phone', 'output');
     assert.deepEqual(result, "415", "display area code test passed.");
 });

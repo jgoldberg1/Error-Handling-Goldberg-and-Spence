@@ -72,7 +72,7 @@ function displayCentralCode(inputId, outputId) {
     // Now try to get the code
     try {
         var centralCode = getCentralCode(phoneNum);
-        outputTextCO = "Your area code is " + centralCode;
+        outputTextCO = "Your central code is " + centralCode;
     } catch (error) {
         console.log(error.message);
         outputText = error.message;
