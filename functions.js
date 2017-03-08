@@ -107,5 +107,35 @@ function displayLineCode(inputId, outputId) {
     document.getElementById(outputId).innerHTML = outputText;
 }
 
+function getCentralCode(phoneNum) {
+    var centralCode;
+
+    try{
+        centralCode = between(phoneNum, ")","-");
+        centralCode = centralCode.trim();
+        if(centralCode.length == 3 && Number(centralCode)){
+            return centralCode;
+        }else{
+            throw new Error("Invalid central code: " + centralCode);
+        }
+        } catch (error){
+            throw new Error("Invalid phone number: " + error.message);
+        }
+    }
+function displayCentralCode(inputId, outputId) {
+    var outputText = "";
+    var phoneNum = document.getElementById(inputId).value;
+
+    // Now try to get the code
+    try {
+        var centralCode = getCentralCode(phoneNum);
+        outputText = "Your central code is " + centralCode;
+    } catch (error) {
+        console.log(error.message);
+        outputText = error.message;
+    }
+
+    document.getElementById(outputId).innerHTML = outputText;
+}
 
 
