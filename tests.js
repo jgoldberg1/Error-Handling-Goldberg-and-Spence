@@ -15,11 +15,3 @@ QUnit.test("Test the getLineCode function.", function (assert) {
     var result = getLineCode(num);
     assert.deepEqual(result, "5555", "Valid line code test passed.");
 });
-
-QUnit.test("Test the validPhone function.", function (assert) {
-    var num = "(415) 847-5555";
-    var result = validPhone(num);
-    assert.deepEqual(result, "Valid Phone Number", "Valid phone number test passed.");
-});
-
-

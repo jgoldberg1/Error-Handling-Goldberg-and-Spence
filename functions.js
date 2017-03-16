@@ -134,30 +134,3 @@ function displayLineCode(inputId, outputId) {
     document.getElementById(outputId).innerHTML = outputTextLC;
 }
 
-
-
-function validPhone(phoneNum) {
-if (phoneNum.length == 14 && phoneNum.charAt(0).match("(") && phoneNum.charAt(1).match("[0-9]") && phoneNum.charAt(2).match("[1-9]") && phoneNum.charAt(3).match("[1-9]") && phoneNum.charAt(4).match(")") && phoneNum.charAt(5).match(" ") && phoneNum.charAt(6).match("[1-9]") && phoneNum.charAt(7).match("[1-9]") && phoneNum.charAt(8).match("[1-9]") && phoneNum.charAt(9).match("-") && phoneNum.charAt(10).match("[1-9]") && phoneNum.charAt(11).match("[1-9]") && phoneNum.charAt(12).match("[1-9]") && phoneNum.charAt(13).match("[1-9]")) {
-return "Valid Phone Number";
-}
-else {
-return "Invalid Phone Number";
-}
-}
-
-
-
-function displayValidPhone(inputId, outputId) {
-    var outputTextPN = "";
-    var phoneNum = document.getElementById(inputId).value;
-    try {
-        var validNum = validPhone(phoneNum);
-        outputTextPN = validNum;
-    }
-    catch(error) {
-        console.log(error.message);
-        outputText = error.message;
-    }
-    document.getElementById(outputId).innerHTML = outputTextPN;
-}
-
