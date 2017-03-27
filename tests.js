@@ -10,9 +10,9 @@ QUnit.test("Test the getCentralCode function.", function (assert) {
     assert.deepEqual(result, "847", "Valid CO code test passed.");
 });
 
-QUnit.test("Test the displayAreaCode function.", function (assert) {
-    var inputId = "(415)8475555";
+QUnit.test("Test the getAreaCode function.", function (assert) {
+    var num = "(415) 847-5555";
 
-    var result = displayAreaCode('phone', 'output');
+    var result = getAreaCode(num);
     assert.deepEqual(result, "415", "display area code test passed.");
 });
